@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box; /* Para garantir que padding e border não aumentem o tamanho total dos elementos */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    display: flex; /* Flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Altura mínima da tela */
+}
+
+.container {
+    text-align: center; /* Centraliza o texto */
+    max-width: 600px; /* Largura máxima */
+    margin: auto; /* Margem automática para centralizar */
+    padding: 20px; /* Preenchimento interno */
+    background-color: #1e1e1e; /* Fundo da caixa */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra da caixa */
+}
+
+h1 {
+    color: #e3e3e3; /* Cor do título */
+}
+
+button {
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    margin: 10px 0; /* Margem superior e inferior */
+    border: none; /* Remove bordas padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #5cb85c; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    cursor: pointer; /* Muda o cursor para mão */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+button:hover {
+    background-color: #4cae4c; /* Cor do botão ao passar o mouse */
+}
+
+input[type="number"], input[type="text"] {
+    padding: 10px; /* Espaçamento interno dos campos de entrada */
+    border: 1px solid #444; /* Borda do campo */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: calc(100% - 22px); /* Largura do campo de entrada */
+    background-color: #333; /* Cor de fundo do campo */
+    color: #fff; /* Cor do texto no campo */
+}
+
+/* Centralizando projetos */
+.projects {
+    display: flex; /* Flexbox para os projetos */
+    flex-direction: column; /* Alinha os projetos em coluna */
+    gap: 10px; /* Espaçamento entre os projetos */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.project {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 15px; /* Espaçamento interno do projeto */
+    background-color: #007bff; /* Cor de fundo do projeto */
+    color: white; /* Cor do texto do projeto */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    width: 100%; /* Ocupa 100% da largura do container */
+    max-width: 300px; /* Largura máxima do botão do projeto */
+}
+
+.project:hover {
+    background-color: #0056b3; /* Cor do projeto ao passar o mouse */
+}
+
+/* Estilo para cronômetro */
+.stopwatch {
+    position: relative; /* Para posicionamento absoluto dos filhos */
+}
+
+#circle {
+    position: relative; /* Para garantir que o círculo seja posicionado corretamente */
+    width: 200px; /* Largura do cronômetro */
+    height: 200px; /* Altura do cronômetro */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+#display {
+    position: absolute; /* Para posicionar o display dentro do círculo */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para centralizar perfeitamente */
+    font-size: 24px; /* Tamanho da fonte do display */
+    font-weight: bold; /* Negrito */
+    color: white; /* Cor do texto do display */
+}
+
+canvas {
+    position: absolute; /* Para posicionar o canvas dentro do círculo */
+    top: 0; /* Posição superior */
+    left: 0; /* Posição à esquerda */
+}
+
+/* Estilo responsivo */
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Largura responsiva para telas menores */
+    }
+
+    button {
+        width: 100%; /* Botões ocupam 100% da largura em telas menores */
+    }
+
+    input[type="number"], input[type="text"] {
+        width: 100%; /* Campos de entrada ocupam 100% da largura em telas menores */
+    }
+
+    .project {
+        max-width: 90%; /* Ajuste na largura máxima dos botões em telas menores */
+    }
+}

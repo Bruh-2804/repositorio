@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cronômetro</h1>
+        <div class="stopwatch">
+            <div id="circle">
+                <div id="display">00:00:00</div>
+                <canvas id="progress" width="200" height="200"></canvas>
+            </div>
+        </div>
+        <button onclick="startTimer()">Iniciar</button>
+        <button onclick="stopTimer()">Parar</button>
+        <button onclick="resetTimer()">Reiniciar</button>
+        <button onclick="goBack()">Voltar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
